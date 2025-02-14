@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockvel App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Stockvel App</h1>
+      <nav>
+        <button id="homeBtn">Home</button>
+        <button id="dashboardBtn">Dashboard</button>
+        <button id="groupsBtn">Groups</button>
+        <button id="investmentsBtn">Investments</button>
+        <button id="profileBtn">Profile</button>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+      <h2>Welcome to Stockvel</h2>
+      <form id="signupForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already a member? <a href="#" id="loginLink">Login</a></p>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <div id="balance">
+        <p>Total Pool Balance: <span id="totalBalance">$0</span></p>
+      </div>
+      <div id="contributions">
+        <h3>Your Contributions</h3>
+        <ul id="contributionList"></ul>
+      </div>
+      <form id="contributionForm">
+        <input type="number" id="contributionAmount" placeholder="Amount" required>
+        <button type="submit">Add Contribution</button>
+      </form>
+      <div id="notifications">
+        <h3>Notifications</h3>
+        <ul id="notificationList"></ul>
+      </div>
+    </section>
+
+    <!-- Groups Section -->
+    <section id="groups">
+      <h2>Groups</h2>
+      <form id="createGroupForm">
+        <input type="text" id="groupName" placeholder="Group Name" required>
+        <button type="submit">Create Group</button>
+      </form>
+      <div id="groupList">
+        <h3>Your Groups</h3>
+        <ul id="groupsList"></ul>
+      </div>
+    </section>
+
+    <!-- Investments Section -->
+    <section id="investments">
+      <h2>Investments</h2>
+      <form id="addInvestmentForm">
+        <input type="text" id="investmentName" placeholder="Investment Name" required>
+        <input type="number" id="investmentAmount" placeholder="Amount" required>
+        <button type="submit">Add Investment</button>
+      </form>
+      <div id="investmentList">
+        <h3>Your Investments</h3>
+        <ul id="investmentsList"></ul>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>Name: <span id="profileName"></span></p>
+      <p>Email: <span id="profileEmail"></span></p>
+      <div id="achievements">
+        <h3>Achievements</h3>
+        <ul id="achievementsList"></ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
